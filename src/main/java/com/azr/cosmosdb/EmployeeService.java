@@ -1,7 +1,9 @@
 package com.azr.cosmosdb;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,11 +24,7 @@ public class EmployeeService {
     
     public void getEmployees(String connectionString){
 
-
-
-
-
-
+        System.out.println("Date in UTC: " + new Date().toString());
 
         log.info("(||-- IN getEmployees --||) ENTER");
 
@@ -36,42 +34,39 @@ public class EmployeeService {
             .tableName(tableName)
             .buildClient();   
 
+        List<Employee> list = new ArrayList<>();        
+
+        // tableClient.listEntities().forEach(tableEntity -> {
+        //     String partitionKey = (tableEntity.getPartitionKey() == null ? " " : tableEntity.getPartitionKey()); 
+        //     String rowKey = (tableEntity.getRowKey() == null ? " " : tableEntity.getRowKey()); 
+        //     String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
+        //     String fullName = (tableEntity.getProperty("fullName") == null ? " " : (String) tableEntity.getProperty("fullName").toString()); 
+        //     String email = (tableEntity.getProperty("email") == null ? " " : (String) tableEntity.getProperty("email").toString());       
+
+
             
-   
-            
-            List<Employee> list = new ArrayList<>();        
+        //     System.out.println("\n\n ------------RESULT-------------");
 
-            tableClient.listEntities().forEach(tableEntity -> {
-                String partitionKey = (tableEntity.getPartitionKey() == null ? " " : tableEntity.getPartitionKey()); 
-                String rowKey = (tableEntity.getRowKey() == null ? " " : tableEntity.getRowKey()); 
-                String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
-                String fullName = (tableEntity.getProperty("fullName") == null ? " " : (String) tableEntity.getProperty("fullName").toString()); 
-                String email = (tableEntity.getProperty("email") == null ? " " : (String) tableEntity.getProperty("email").toString());       
- 
-
-                
-                System.out.println("\n\n ------------RESULT-------------");
-
-                System.out.println(
-                    "partitionKey: " + partitionKey +
-                    "rowKey: " + rowKey + 
-                    "Timestamp: " + Timestamp + 
-                    "fullName: " + fullName + 
-                    ", email: " + email   
-                );
+        //     System.out.println(
+        //         "partitionKey: " + partitionKey +
+        //         "rowKey: " + rowKey + 
+        //         "Timestamp: " + Timestamp + 
+        //         "fullName: " + fullName + 
+        //         ", email: " + email   
+        //     );
 
 
 
-                // list.add(
-                //     new Employee(                
-                //         partitionKey,
-                //         rowKey, 
-                //         Timestamp,
-                //         fullName,                    
-                //         email
-                // ));    
-             });  
+            // list.add(
+            //     new Employee(                
+            //         partitionKey,
+            //         rowKey, 
+            //         Timestamp,
+            //         fullName,                    
+            //         email
+            // ));    
+        //  });  
 
-            log.info("(||-- END getEmployees --||) FINAL");
-        }        
-    }
+        log.info("(||-- END getEmployees --||) FINAL");
+    }        
+}
