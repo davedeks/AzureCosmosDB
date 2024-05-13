@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.2.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.azr</groupId>
+	<artifactId>cosmosdb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>cosmosdb</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+
+<!-- <dependencyManagement>
+    	<dependencies>
+			<dependency>
+				<groupId>com.azure</groupId>
+				<artifactId>azure-sdk-bom</artifactId>
+				<version>1.2.23</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement> -->
+
+	<dependencies>
+
+<!-- 
+<dependency>
+  <groupId>com.azure</groupId>
+  <artifactId>azure-data-tables</artifactId>
+  <version>12.1.1</version>
+</dependency> -->
+
+
+  <!-- <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-storage-blob</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-security-keyvault-secrets</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+  </dependency> -->
+
+
+		<!-- <dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-sdk-bom</artifactId>
+			<version>1.2.23</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency> -->
+
+
+
+
+
+
+<!-- 
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-handler</artifactId> 
+			<version>4.1.101.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-codec-http2</artifactId>
+			<version>4.1.101.Final</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-codec-http</artifactId>
+			<version>4.1.101.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-transport-native-unix-common</artifactId>
+			<version>4.1.101.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-transport-native-epoll</artifactId>
+			<version>4.1.101.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-transport-native-kqueue</artifactId>
+			<version>4.1.101.Final</version>
+		</dependency>
+
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-buffer</artifactId>
+    <version>4.1.101.Final</version>
+</dependency>
+
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-codec-http2</artifactId>
+    <version>4.1.101.Final</version>
+</dependency>
+
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-common</artifactId>
+    <version>4.1.101.Final</version>
+</dependency>
+
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-handler-proxy</artifactId>
+    <version>4.1.101.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty-codec</artifactId>
+    <version>4.1.101.Final</version>
+</dependency> -->
+
+
+<!-- <dependency>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>animal-sniffer-annotations</artifactId>
+    <version>1.23</version>
+    <scope>provided</scope>
+</dependency>
+
+
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-http</artifactId>
+    <version>12.0.8</version>
+</dependency> -->
+
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-data-tables</artifactId>
+			<version>12.4.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-core</artifactId>
+			<version>10.1.18</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/com.microsoft.azure/azure-storage -->
+		<!-- <dependency>
+			<groupId>com.microsoft.azure</groupId>
+			<artifactId>azure-storage</artifactId>
+			<version>8.6.6</version>
+		</dependency> -->
+
+<!-- https://mvnrepository.com/artifact/com.azure/azure-storage-blob -->
+<!-- <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-storage-blob</artifactId>
+    <version>12.25.4</version>
+</dependency> -->
+
+
+
+
+
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<scope>runtime</scope>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>2.0</version>	
+		</dependency>
+
+    	<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-actuator</artifactId>
+    	</dependency>		
+		 <dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20231013</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.9.3</version>
+			<scope>test</scope>
+		</dependency>
+
+<!-- 
+	<dependency>
+		<groupId>com.azure</groupId>
+		<artifactId>azure-core</artifactId>
+		<version>1.49.0</version>
+	</dependency> -->
+
+
+		<!-- <dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-core-test</artifactId>
+			<version>1.25.0</version> 
+			<scope>test</scope>
+		</dependency>  -->
+
+		<!-- <dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-identity</artifactId>
+			<version>1.12.0</version> 
+			<scope>test</scope>
+		</dependency> -->
+
+
+	</dependencies>
+
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
