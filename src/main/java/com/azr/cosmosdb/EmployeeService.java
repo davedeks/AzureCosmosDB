@@ -36,26 +36,24 @@ public class EmployeeService {
 
         List<Employee> list = new ArrayList<>();        
 
-        // tableClient.listEntities().forEach(tableEntity -> {
-        //     String partitionKey = (tableEntity.getPartitionKey() == null ? " " : tableEntity.getPartitionKey()); 
-        //     String rowKey = (tableEntity.getRowKey() == null ? " " : tableEntity.getRowKey()); 
-        //     String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
-        //     String fullName = (tableEntity.getProperty("fullName") == null ? " " : (String) tableEntity.getProperty("fullName").toString()); 
-        //     String email = (tableEntity.getProperty("email") == null ? " " : (String) tableEntity.getProperty("email").toString());       
+        tableClient.listEntities().forEach(tableEntity -> {
+            String partitionKey = (tableEntity.getPartitionKey() == null ? " " : tableEntity.getPartitionKey()); 
+            String rowKey = (tableEntity.getRowKey() == null ? " " : tableEntity.getRowKey()); 
+            String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
+            String fullName = (tableEntity.getProperty("fullName") == null ? " " : (String) tableEntity.getProperty("fullName").toString()); 
+            String email = (tableEntity.getProperty("email") == null ? " " : (String) tableEntity.getProperty("email").toString());       
 
 
             
-        //     System.out.println("\n\n ------------RESULT-------------");
+            System.out.println("\n\n ------------RESULT-------------");
 
-        //     System.out.println(
-        //         "partitionKey: " + partitionKey +
-        //         "rowKey: " + rowKey + 
-        //         "Timestamp: " + Timestamp + 
-        //         "fullName: " + fullName + 
-        //         ", email: " + email   
-        //     );
-
-
+            System.out.println(
+                "partitionKey: " + partitionKey +
+                "rowKey: " + rowKey + 
+                "Timestamp: " + Timestamp + 
+                "fullName: " + fullName + 
+                ", email: " + email   
+            );
 
             // list.add(
             //     new Employee(                
@@ -65,7 +63,7 @@ public class EmployeeService {
             //         fullName,                    
             //         email
             // ));    
-        //  });  
+         });  
 
         log.info("(||-- END getEmployees --||) FINAL");
     }        
