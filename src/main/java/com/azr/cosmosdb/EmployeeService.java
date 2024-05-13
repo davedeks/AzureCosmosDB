@@ -39,7 +39,7 @@ public class EmployeeService {
         tableClient.listEntities().forEach(tableEntity -> {
             String partitionKey = (tableEntity.getPartitionKey() == null ? " " : tableEntity.getPartitionKey()); 
             String rowKey = (tableEntity.getRowKey() == null ? " " : tableEntity.getRowKey()); 
-            String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
+            //String Timestamp = (tableEntity.getProperty("Timestamp") == null ? " " : (String) tableEntity.getProperty("Timestamp").toString()); 
             String fullName = (tableEntity.getProperty("fullName") == null ? " " : (String) tableEntity.getProperty("fullName").toString()); 
             String email = (tableEntity.getProperty("email") == null ? " " : (String) tableEntity.getProperty("email").toString());       
 
@@ -50,10 +50,12 @@ public class EmployeeService {
             System.out.println(
                 "partitionKey: " + partitionKey +
                 "rowKey: " + rowKey + 
-                "Timestamp: " + Timestamp + 
+                //"Timestamp: " + Timestamp + 
                 "fullName: " + fullName + 
                 ", email: " + email   
             );
+
+            System.out.println("\n\n ------------RESULT-------------");
 
             // list.add(
             //     new Employee(                
